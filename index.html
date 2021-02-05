@@ -15,10 +15,10 @@
     <script>
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext("2d");
-        const skelly = new Image();
-        skelly.src = "assets/megaman.png";
+        const megaman = new Image();
+        megaman.src = "assets/megaman.png";
 
-        skelly.addEventListener("load",terminouDeCarregar);
+        megaman.addEventListener("load",terminouDeCarregar);
         
         function desenhaFundo(){
             ctx.fillStyle = "green";
@@ -55,7 +55,7 @@
 
             quadro = (quadro >= POSES[pose].qmax) ? 0 : quadro + POSES[pose].pv*dt;
 
-            ctx.drawImage(skelly,
+            ctx.drawImage(megaman,
             //sx, sy, sw, sh
              Math.floor(quadro)*39, pose*39, 39, 39,
             //dx, dy, dw, dh 
